@@ -1,0 +1,23 @@
+{
+  "name": "space653000",
+  "owner": {
+    "name": "Space653000",
+    "url": "https://github.com/Space653000"
+  },
+  "description": "A complete 36-skill marketplace for Claude Code, ChatGPT, and Codex.",
+  "plugins": [
+    {
+      "name": "mattpocock-skills-complete",
+      "source": "./",
+      "description": "All engineering, productivity, in-progress, and misc skills from mattpocock/skills.",
+      "category": "engineering",
+      "keywords": [
+        "engineering",
+        "skills",
+        "claude-code",
+        "chatgpt",
+        "codex"
+      ]
+    }
+  ]
+}

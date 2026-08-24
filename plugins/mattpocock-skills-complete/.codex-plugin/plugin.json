@@ -1,0 +1,41 @@
+{
+  "name": "mattpocock-skills-complete",
+  "version": "1.3.0",
+  "description": "Complete 36-skill distribution of Matt Pocock's engineering and productivity workflows for Claude Code, ChatGPT, and Codex.",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://www.aihero.dev"
+  },
+  "homepage": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL",
+  "repository": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL",
+  "license": "MIT",
+  "keywords": [
+    "engineering",
+    "skills",
+    "claude-code",
+    "chatgpt",
+    "codex",
+    "tdd",
+    "code-review",
+    "productivity"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Matt Pocock Skills Complete",
+    "shortDescription": "Choose from all 36 engineering and productivity skills.",
+    "longDescription": "A complete cross-platform catalog containing every engineering, productivity, in-progress, and misc skill from mattpocock/skills.",
+    "developerName": "Matt Pocock",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL",
+    "defaultPrompt": [
+      "Help me choose the right skill for this task.",
+      "Turn this idea into a tested implementation.",
+      "Review this codebase and suggest the next workflow."
+    ]
+  }
+}
