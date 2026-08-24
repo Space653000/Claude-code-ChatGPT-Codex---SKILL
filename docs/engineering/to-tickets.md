@@ -6,7 +6,9 @@ Every ticket is a **tracer bullet**: a narrow but complete path through every la
 
 ## When to reach for it
 
-You invoke this by typing `/to-tickets`. The [agent](https://www.aihero.dev/ai-coding-dictionary/agent) won't reach for it on its own.
+The [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for
+`to-tickets` automatically when a plan or specification needs actionable,
+dependency-aware work items. Typing `/to-tickets` remains optional.
 
 | Where you are | What to run |
 | --- | --- |

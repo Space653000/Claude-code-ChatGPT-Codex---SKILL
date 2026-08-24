@@ -8,7 +8,11 @@ The second thing that separates it from labelling by hand: it recommends and wai
 
 ## When to reach for it
 
-You invoke this by typing `/triage` and then describing what you want in plain language. The [agent](https://www.aihero.dev/ai-coding-dictionary/agent) won't reach for it on its own. "Show me anything that needs my attention", "let's look at #42", "move #42 to ready-for-agent".
+The [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for
+`triage` automatically when you ask to assess or prepare incoming issues and
+external pull requests. Typing `/triage` remains optional. Example requests
+include "Show me anything that needs my attention", "let's look at #42", and
+"move #42 to ready-for-agent".
 
 | What you have | Where to go |
 | --- | --- |

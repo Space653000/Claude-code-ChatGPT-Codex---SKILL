@@ -1,7 +1,6 @@
 ---
 name: writing-fragments
-description: "Writing, explore: mine raw fragments, no structure yet."
-disable-model-invocation: true
+description: Experimental exploratory writing workflow for mining raw fragments without imposing structure. Use when the user needs to discover observations, examples, or language before outlining.
 ---
 
 <what-to-do>

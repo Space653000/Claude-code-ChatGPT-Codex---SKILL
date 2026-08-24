@@ -2,6 +2,10 @@
 
 The skill-specific branch of [`writing-for-agents`](SKILL.md): what changes when the document is a skill (frontmatter, the invocation choice, and router skills). Everything else about writing it is the universal reference in `SKILL.md`.
 
+This distribution requires every active skill to remain model-invoked. The
+user-invoked mechanics below are reference material for other repositories only
+and apply only when a user explicitly requests that behavior.
+
 ## Invocation
 
 Two choices, trading the two loads:

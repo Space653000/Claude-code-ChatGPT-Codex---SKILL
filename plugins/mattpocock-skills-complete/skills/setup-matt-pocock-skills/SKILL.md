@@ -1,6 +1,6 @@
 ---
 name: setup-matt-pocock-skills
-description: "Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills."
+description: Configure a repository for this skill catalog by choosing its issue tracker, triage labels, domain documentation layout, and agent instructions. Use when the catalog is newly installed or project-level setup is missing.
 ---
 
 # Setup Matt Pocock's Skills

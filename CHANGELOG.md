@@ -1,5 +1,14 @@
 # mattpocock-skills-complete
 
+## 1.4.0
+
+### Minor Changes
+
+- Make all 36 skills automatically invokable in Claude Code, ChatGPT, and Codex.
+- Add model-facing trigger descriptions for the 21 previously explicit-only skills.
+- Add a repository URL bootstrap contract for automatic installation and skill selection.
+- Add validation that rejects any future explicit-only Claude or Codex invocation policy.
+
 ## 1.3.0
 
 ### Minor Changes

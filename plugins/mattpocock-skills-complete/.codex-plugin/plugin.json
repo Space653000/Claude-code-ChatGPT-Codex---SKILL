@@ -1,7 +1,7 @@
 {
   "name": "mattpocock-skills-complete",
-  "version": "1.3.0",
-  "description": "Complete 36-skill distribution of Matt Pocock's engineering and productivity workflows for Claude Code, ChatGPT, and Codex.",
+  "version": "1.4.0",
+  "description": "Complete auto-selecting 36-skill distribution of Matt Pocock's engineering and productivity workflows for Claude Code, ChatGPT, and Codex.",
   "author": {
     "name": "Matt Pocock",
     "url": "https://www.aihero.dev"
@@ -22,8 +22,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Matt Pocock Skills Complete",
-    "shortDescription": "Choose from all 36 engineering and productivity skills.",
-    "longDescription": "A complete cross-platform catalog containing every engineering, productivity, in-progress, and misc skill from mattpocock/skills.",
+    "shortDescription": "Automatically choose from all 36 available skills.",
+    "longDescription": "A complete cross-platform catalog that lets the agent automatically choose any engineering, productivity, in-progress, or misc skill from mattpocock/skills.",
     "developerName": "Matt Pocock",
     "category": "Developer Tools",
     "capabilities": [
@@ -33,7 +33,7 @@
     ],
     "websiteURL": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL",
     "defaultPrompt": [
-      "Help me choose the right skill for this task.",
+      "Choose and use the right skills for this task.",
       "Turn this idea into a tested implementation.",
       "Review this codebase and suggest the next workflow."
     ]

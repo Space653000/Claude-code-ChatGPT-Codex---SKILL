@@ -1,6 +1,6 @@
 # Misc
 
-Specialized tools that are included in the complete plugin for explicit selection when their narrow use case applies.
+Specialized tools that the complete plugin selects automatically when their narrow use case applies.
 
 - **[git-guardrails-claude-code](./git-guardrails-claude-code/SKILL.md)**: Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute.
 - **[migrate-to-shoehorn](./migrate-to-shoehorn/SKILL.md)**: Migrate test files from `as` type assertions to @total-typescript/shoehorn.

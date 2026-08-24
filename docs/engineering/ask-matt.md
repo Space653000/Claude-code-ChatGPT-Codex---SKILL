@@ -2,11 +2,17 @@
 
 `ask-matt` is the router over the skills in this repo. You describe the situation you are in (an idea you cannot start, a pile of incoming bug reports, a [session](https://www.aihero.dev/ai-coding-dictionary/session) that has run long), and it names the skill or the sequence of skills that fits, plus where the human decisions in that sequence sit.
 
-It recommends and stops. It does not grill, write a [spec](https://www.aihero.dev/ai-coding-dictionary/spec), open a file or fire the skill it just named; what you get back is the next thing to type, and you type it. It is also a hand-written map of the skills in this repo rather than a scan of what you have installed, so it will not route you over your own skills or another author's.
+It inspects the available catalog, selects the smallest relevant route, and
+continues by loading the chosen skills. It stops after recommending a route
+only when you asked for advice rather than execution. It is also a hand-written
+map of this repository's skills, so it will not route over your own skills or
+another author's unless their descriptions are independently available.
 
 ## When to reach for it
 
-You invoke this by typing `/ask-matt`; the agent won't reach for it on its own.
+The agent reaches for `ask-matt` automatically when the best workflow is
+unclear, the task spans multiple skills, or you ask what to do next. Typing
+`/ask-matt` remains an optional shortcut.
 
 | Your situation | What the router gives back |
 | --- | --- |
@@ -53,7 +59,11 @@ People keep asking for one in the README. This skill is that list: it is what it
 
 **It told me half the skills aren't installed.**
 
-A known bug, unfixed. Most of the skills the router routes you through set `disable-model-invocation: true`, which means the harness leaves them out of the skill list it injects into the agent's context. The agent reads that list as exhaustive and reports them missing. One reported session had it declare the whole spec-and-tickets flow absent and reroute to bare `/grilling` and `/tdd`. Thirteen of the plugin's twenty-two skills carry the flag, so this is the common case rather than an edge. They are installed. Type the slash command anyway, or check `.claude-plugin/plugin.json`, which is the authority on what is present.
+The complete cross-platform distribution removes explicit-only invocation flags
+from all 36 skills. The router and every destination skill remain visible to
+the model, so the agent can inspect the catalog and continue the selected flow
+without asking you to type a skill name. The plugin manifests remain the
+authority on what is installed.
 
 **It described a skill's behaviour, and the skill doesn't do that.**
 

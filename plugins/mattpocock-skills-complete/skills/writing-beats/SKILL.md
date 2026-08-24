@@ -1,6 +1,6 @@
 ---
 name: writing-beats
-description: Writing, exploit; assemble raw material into a journey of beats, grounding each term before a beat leans on it.
+description: Experimental writing workflow for arranging raw material into a coherent journey of beats. Use when ideas already exist but need narrative order and each concept must be grounded before later sections rely on it.
 ---
 
 <what-to-do>

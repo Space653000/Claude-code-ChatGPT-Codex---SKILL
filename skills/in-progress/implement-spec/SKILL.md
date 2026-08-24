@@ -1,7 +1,6 @@
 ---
 name: implement-spec
-description: "Implement a specification in code."
-disable-model-invocation: true
+description: Experimental end-to-end specification implementation. Use when the user provides a specification with associated tickets and asks for the complete coding workflow.
 ---
 
 You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.

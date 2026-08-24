@@ -6,7 +6,10 @@ What it buys is **portability**, not compression. That makes the skill narrower 
 
 ## When to reach for it
 
-You invoke this by typing `/handoff`; the agent won't reach for it on its own. Pass a note about what the next session is for, and the document is written for it.
+The agent reaches for `handoff` automatically when work must move to another
+harness, directory, colleague, or side task. Typing `/handoff` remains optional.
+Pass a note about what the next session is for, and the document is written for
+it.
 
 Four situations are the whole trigger:
 

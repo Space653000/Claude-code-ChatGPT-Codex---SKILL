@@ -1,15 +1,23 @@
-# Model-invoked vs user-invoked
+# Automatic invocation
 
-Every `SKILL.md` in this repo is a skill. The one axis that splits them is **invocation**, who can reach it:
+Every active `SKILL.md` in this distribution is reachable by the model and the
+user. Automatic selection is the invariant, not a per-skill option:
 
-- **User-invoked**: reachable **only by the human typing its name**. Set `disable-model-invocation: true` in the frontmatter (Claude Code) and `policy.allow_implicit_invocation: false` in `agents/openai.yaml` (Codex). The `description` is **human-facing**: a one-line summary read by a person browsing slash-commands. Strip trigger lists ("Use when the user says…").
-- **Model-invoked**: reachable by **model or user**. The default: omit `disable-model-invocation` and the `policy` block from `agents/openai.yaml`. The `description` is **model-facing** and keeps rich trigger phrasing ("Use when the user wants…, mentions…, asks for…") so auto-invocation fires. The test for whether a skill should stay model-invoked: _could the model usefully reach for this autonomously?_ (Reuse is the reason to extract a skill, not the test.)
+- Omit `disable-model-invocation` from Claude skill frontmatter.
+- Omit `policy.allow_implicit_invocation: false` from Codex `agents/openai.yaml`.
+- Write each `description` as a model-facing context pointer that says what the
+  skill does and when the task should trigger it.
+- Keep beta or specialized status in the description so automatic selection
+  can account for maturity and scope.
 
-Each harness excludes a user-invoked skill from the model's reach in its own way, so nothing but the human can fire it: no other skill can. A user-invoked skill may invoke model-invoked skills, but it can never reach another user-invoked skill.
+The agent inspects the available descriptions and loads the smallest relevant
+skill set. A user may still select a skill explicitly, but no workflow depends
+on the user remembering its name.
 
-Every skill also carries an `agents/openai.yaml` beside its `SKILL.md`. It holds Codex UI metadata: `interface.display_name` and `interface.short_description` for the skill picker, and, for user-invoked skills, the `policy.allow_implicit_invocation: false` that pairs with `disable-model-invocation`. Keep the two in sync: a skill is user-invoked in both harnesses or neither.
-
-Bucket `README.md`s and the top-level `README.md` group entries into **User-invoked** and **Model-invoked**.
+Every skill also carries an `agents/openai.yaml` beside its `SKILL.md`. It holds
+Codex UI metadata such as `interface.display_name` and
+`interface.short_description`. An explicit-only `policy` block is a validation
+failure in this distribution.
 
 ## Dependencies between them
 
@@ -19,7 +27,10 @@ This is about **operative** instructions: a skill's own steps telling the agent 
 
 The Skill tool takes one skill per call. A step that needs two skills is two calls, not one call with two names: say so (`Call the Skill tool twice, for "grilling" and "domain-modeling"`), not "call it with X and Y," which reads as a single call taking both.
 
-This whole convention only holds when the named skill is **model-invoked**. A user-invoked skill can never be reached this way, full stop: per the invariant above, no other skill can call it, including by naming it to the Skill tool. When a step's precondition is a user-invoked skill (e.g. `setup-matt-pocock-skills`), phrase it as an instruction for the human to act on: "tell the user to run `/setup-matt-pocock-skills`", never as a Skill tool call.
+This convention works for every active skill in this distribution because all
+of them are model-reachable. A skill may call another skill when the dependency
+is required, while the top-level agent remains responsible for choosing the
+smallest relevant set.
 
 ## Passive vs active domain work
 

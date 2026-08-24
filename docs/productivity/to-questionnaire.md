@@ -6,7 +6,9 @@ It grills you about the **send**, never the subject. Interviewing you about the 
 
 ## When to reach for it
 
-You invoke this by typing `/to-questionnaire`; the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) won't reach for it on its own.
+The [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for
+`to-questionnaire` automatically when a decision is blocked on knowledge held
+by another person. Typing `/to-questionnaire` remains optional.
 
 Reach for it when a decision is blocked on knowledge that lives in one other person's head: a client, a domain expert, an exec who owns the business rules, a colleague on a team you don't sit with. Which skill you want depends on where the answers actually are:
 

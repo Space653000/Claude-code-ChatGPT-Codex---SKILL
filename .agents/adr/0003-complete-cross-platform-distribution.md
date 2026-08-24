@@ -5,8 +5,9 @@ engineering and productivity skills. It defers a native Codex plugin because a
 single recursive Codex skills path could not express that curated subset.
 
 This distribution has a different goal: one GitHub repository should expose
-every active `SKILL.md` for selection in Claude Code, ChatGPT, and Codex. A
-complete catalog makes the Codex constraint useful rather than limiting.
+every active `SKILL.md` for automatic selection in Claude Code, ChatGPT, and
+Codex. A complete catalog makes the Codex constraint useful rather than
+limiting, and users should not need to remember skill names.
 
 ## Decision
 
@@ -16,9 +17,12 @@ complete catalog makes the Codex constraint useful rather than limiting.
 - Generate `plugins/mattpocock-skills-complete/skills/` as a flat copy of the
   canonical bucketed tree. Codex plugin validation requires one immediate
   directory per skill.
-- Remove Claude's `disable-model-invocation: true` field only from generated
-  Codex copies. Their `agents/openai.yaml` files remain authoritative for Codex
-  invocation policy.
+- Remove explicit-only invocation flags from every canonical skill and generated
+  Codex copy. All 36 descriptions are model-facing context pointers.
+- Preserve Claude-only `argument-hint` metadata in canonical skills and remove
+  it from generated Codex copies.
+- Treat a user-provided repository URL as an installation and automatic-use
+  request, with the detailed contract in `.agents/install-block.md`.
 - Keep beta and specialized skills clearly labelled in the README and bucket
   documentation instead of presenting them as stable defaults.
 - Keep harness-specific marketplace entries in `.claude-plugin/marketplace.json`
@@ -33,3 +37,4 @@ Every release must satisfy all of these checks:
 3. Codex plugin validation passes.
 4. `package.json` and both plugin manifests use the same version.
 5. The upstream source commit and MIT license remain documented.
+6. No active skill contains a Claude or Codex explicit-only invocation flag.

@@ -46,10 +46,18 @@ function listFiles(root) {
 }
 
 function codexContent(source, file) {
-  if (file !== "SKILL.md") return source;
-  const transformed = source
-    .toString("utf8")
-    .replace(/^disable-model-invocation:\s*true\r?\n/m, "");
+  const normalizedFile = file.replaceAll("\\", "/");
+  let transformed = source.toString("utf8");
+  if (normalizedFile === "SKILL.md") {
+    transformed = transformed
+      .replace(/^disable-model-invocation:\s*true\r?\n/m, "")
+      .replace(/^argument-hint:\s*.*\r?\n/m, "");
+  }
+  if (normalizedFile === "agents/openai.yaml") {
+    transformed = transformed
+      .replace(/^  allow_implicit_invocation:\s*false\r?\n/m, "")
+      .replace(/^policy:\r?\n(?!(?: {2}|\t))/m, "");
+  }
   return Buffer.from(transformed, "utf8");
 }
 

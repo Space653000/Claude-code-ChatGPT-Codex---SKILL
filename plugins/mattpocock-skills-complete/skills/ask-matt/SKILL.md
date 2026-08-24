@@ -1,11 +1,16 @@
 ---
 name: ask-matt
-description: Ask which skill or flow fits your situation. A router over the skills in this repo.
+description: Route requests across this repository's skill catalog. Use when the best workflow is unclear, a task spans multiple skills, or the user asks what to do next; inspect available skills and select the smallest relevant set.
 ---
 
 # Ask Matt
 
 You don't remember every skill, so ask.
+
+Inspect the available skill descriptions before choosing a route. Select the
+smallest set that covers the request, call those skills, and continue the work.
+Stop after recommending a route only when the user asked for advice rather than
+execution. The user never needs to type the skill names in the route.
 
 A **flow** is a path through the skills. Most paths run along one **main flow**, and two **on-ramps** merge onto it. Everything else is standalone, or a vocabulary layer that runs underneath.
 
@@ -86,4 +91,4 @@ Off the main flow entirely.
 
 ## Precondition
 
-**`/setup-matt-pocock-skills`**: run before your first engineering flow to configure the issue tracker, triage labels, and doc layout the other skills assume. Custom issue trackers also work.
+**`/setup-matt-pocock-skills`**: automatically run before the first engineering flow when tracker or domain-doc configuration is missing. It configures the issue tracker, triage labels, and doc layout the other skills assume. Custom issue trackers also work.

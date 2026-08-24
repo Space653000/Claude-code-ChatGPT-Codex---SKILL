@@ -1,7 +1,6 @@
 ---
 name: teach
-description: Teach the user a new skill or concept, within this workspace.
-disable-model-invocation: true
+description: Teach a skill or concept through a stateful learning path grounded in the current workspace. Use when the user wants instruction, practice, or an explanation designed for learning across sessions.
 argument-hint: "What would you like to learn about?"
 ---
 

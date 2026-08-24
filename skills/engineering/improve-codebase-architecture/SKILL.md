@@ -1,7 +1,6 @@
 ---
 name: improve-codebase-architecture
-description: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
-disable-model-invocation: true
+description: Analyze a codebase for deep-module architecture opportunities and present an interactive report. Use when the user asks to improve module boundaries, interfaces, testability, or AI navigability across a codebase.
 ---
 
 # Improve Codebase Architecture
