@@ -1,10 +1,10 @@
 {
   "name": "mattpocock-skills-complete",
-  "version": "1.4.0",
-  "description": "Complete auto-selecting 36-skill distribution of Matt Pocock's engineering and productivity workflows for Claude Code, ChatGPT, and Codex.",
+  "version": "1.5.0",
+  "description": "Auto-selecting 38-skill distribution with 36 MIT-licensed Matt Pocock skills and two original public workflow additions for Claude Code, ChatGPT, and Codex.",
   "author": {
-    "name": "Matt Pocock",
-    "url": "https://www.aihero.dev"
+    "name": "Matt Pocock and Space653000",
+    "url": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL"
   },
   "homepage": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL",
   "repository": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL",
@@ -22,9 +22,9 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Matt Pocock Skills Complete",
-    "shortDescription": "Automatically choose from all 36 available skills.",
-    "longDescription": "A complete cross-platform catalog that lets the agent automatically choose any engineering, productivity, in-progress, or misc skill from mattpocock/skills.",
-    "developerName": "Matt Pocock",
+    "shortDescription": "Automatically choose from all 38 available skills.",
+    "longDescription": "A cross-platform catalog with 36 pinned Matt Pocock skills and two original public workflow additions, all available for automatic agent selection.",
+    "developerName": "Matt Pocock and Space653000",
     "category": "Developer Tools",
     "capabilities": [
       "Interactive",

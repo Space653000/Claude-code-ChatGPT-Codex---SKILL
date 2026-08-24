@@ -21,13 +21,13 @@ install and use the complete catalog. The agent must:
 3. Start a new chat or session when the harness requires it to load the plugin.
 4. Inspect the available skill names and descriptions before planning each
    task, then load the smallest relevant set of skill files.
-5. Select skills automatically. All 36 skills are model-reachable, so the user
+5. Select skills automatically. All 38 skills are model-reachable, so the user
    never needs to remember or type a skill name.
 6. Keep normal authorization boundaries. Selecting a skill does not authorize
    unrelated external writes or destructive actions.
 
 Installation is complete only when the plugin is visible in the current
-harness and all 36 skills are discoverable.
+harness and all 38 skills are discoverable.
 
 ## Claude Code
 
@@ -69,10 +69,10 @@ skills with the same names.
 
 Both plugin manifests expose every active `SKILL.md` under `skills/`:
 
-- 18 engineering skills
+- 20 engineering skills
 - 7 productivity skills
 - 7 in-progress skills
 - 4 misc skills
 
-The README must keep the beta and specialized labels visible even though all 36
+The README must keep the beta and specialized labels visible even though all 38
 skills are automatically selectable.

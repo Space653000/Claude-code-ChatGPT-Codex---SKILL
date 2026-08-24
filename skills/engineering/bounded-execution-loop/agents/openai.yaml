@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bounded Execution Loop"
+  short_description: "Run approved checklists within safe bounds"
+  default_prompt: "Use $bounded-execution-loop to execute this approved checklist safely."

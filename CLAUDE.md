@@ -6,7 +6,7 @@ When the user provides this repository URL for installation or use, follow the
 agent bootstrap contract in [`.agents/install-block.md`](./.agents/install-block.md).
 Detect the current harness, install the complete plugin, inspect skill
 descriptions before each task, and automatically load the smallest relevant
-skill set. All 36 skills are model-reachable. The user never needs to name a
+skill set. All 38 skills are model-reachable. The user never needs to name a
 skill manually.
 
 Skills are organized into bucket folders under `skills/`:
@@ -49,7 +49,7 @@ flags are forbidden in both Claude and Codex metadata. See
 [`ask-matt`](./skills/engineering/ask-matt/SKILL.md) is the router that maps every user-reachable skill and how they relate. The same trigger that re-syncs a docs page applies to it: whenever you add, rename, remove, or change how a user-reachable skill fits the flows, re-read `ask-matt`'s `SKILL.md` and update it so the map stays accurate: a new skill it never mentions, or a stale one it still routes to, is a router that lies.
 
 `npm run check-plugin` must verify synchronized versions, the generated Codex
-copy, and automatic invocation for all 36 skills.
+copy, and automatic invocation for every active skill.
 
 To (re)link every skill into the local harness skill directories (`~/.claude/skills`, `~/.agents/skills`), run `scripts/link-skills.sh`. Each entry is a symlink into this repo, so a `git pull` keeps installed skills current; re-run the script after adding, removing, or renaming a skill.
 

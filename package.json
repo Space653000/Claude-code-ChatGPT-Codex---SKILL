@@ -1,8 +1,8 @@
 {
   "name": "mattpocock-skills-complete",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
-  "description": "Complete cross-platform distribution of Matt Pocock's agent skills",
+  "description": "Cross-platform Matt Pocock skill catalog with public workflow additions",
   "repository": {
     "type": "git",
     "url": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adversarial Plan Review"
+  short_description: "Challenge costly plans before implementation"
+  default_prompt: "Use $adversarial-plan-review to challenge this plan before implementation."

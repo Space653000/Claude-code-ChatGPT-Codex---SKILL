@@ -20,11 +20,15 @@ unclear, the task spans multiple skills, or you ask what to do next. Typing
 | Bugs and requests arriving from other people | The [triage](https://aihero.dev/skills-triage) on-ramp, and why [tickets](https://www.aihero.dev/ai-coding-dictionary/ticket) you generated yourself don't belong on it |
 | Two skills that look interchangeable | The line between them, and it is usually one concrete test rather than a matter of taste. [grill-me](https://aihero.dev/skills-grill-me) or [grill-with-docs](https://aihero.dev/skills-grill-with-docs) turns on whether you are in a working directory; [grill-with-docs](https://aihero.dev/skills-grill-with-docs) or [wayfinder](https://aihero.dev/skills-wayfinder) turns on whether the effort fits one session |
 | A long session and a decision about the [context](https://www.aihero.dev/ai-coding-dictionary/context) | The ordered tree over the five options at a phase boundary |
+| An approved plan whose direction is expensive to reverse | [adversarial-plan-review](https://aihero.dev/skills-adversarial-plan-review) before implementation |
+| A large, decision-free checklist that may run unattended | [bounded-execution-loop](https://aihero.dev/skills-bounded-execution-loop) with acceptance, checkpoints, and stop rules |
 | A skill you have already picked | Nothing useful. Invoke that skill directly. |
 
 ## Prerequisites
 
-The router names skills; it does not install them. Everything it points at has to be installed for the recommendation to be actionable, and it only knows the promoted skills in this repo.
+The router names and loads installed skills; it does not install missing ones.
+This distribution keeps its map synchronized with every active skill in the
+catalog.
 
 The tracker-dependent routes (triage, `to-spec`, `to-tickets`, `implement`) assume [setup-matt-pocock-skills](https://aihero.dev/skills-setup-matt-pocock-skills) has already configured an issue tracker in the repo. The router will happily recommend them before that has happened.
 
@@ -32,7 +36,10 @@ The tracker-dependent routes (triage, `to-spec`, `to-tickets`, `implement`) assu
 
 The word the skill gives you to think with is **flow**: a path *through* the skills, not a single one. Naming your situation places you on a flow at a step, which is a different answer from "here is the skill that matches your keywords". Four kinds of route exist, and the skill itself carries them in full:
 
-- **The main flow**, idea to ship. Grill, spec, tickets, implement, review, with two branches inside it: a prototype detour when a question needs runnable code to settle, and the spec-and-tickets split, which only earns its cost when the build spans more than one session.
+- **The main flow**, idea to ship. Grill, spec, tickets, optional adversarial
+  plan review, implementation or a bounded execution loop, then code review.
+  Its branches account for runnable design questions, session count, direction
+  risk, and unattended volume.
 - **On-ramps**, for a situation that generates work and then merges onto the main flow: incoming bug reports, something broken, or an effort too foggy and too large to hold in one session.
 - **Standalones**, off every flow, reached for on their own terms: the prototype, the questionnaire, the merge conflict you are already sitting in.
 - **A vocabulary layer underneath**, the two references the other skills pull in when the words rather than the process are the problem.
@@ -60,7 +67,7 @@ People keep asking for one in the README. This skill is that list: it is what it
 **It told me half the skills aren't installed.**
 
 The complete cross-platform distribution removes explicit-only invocation flags
-from all 36 skills. The router and every destination skill remain visible to
+from all 38 skills. The router and every destination skill remain visible to
 the model, so the agent can inspect the catalog and continue the selected flow
 without asking you to type a skill name. The plugin manifests remain the
 authority on what is installed.
@@ -87,7 +94,8 @@ Check the changelog for a rename before assuming it is gone. `writing-great-skil
 
 ## It's working if
 
-- It ends by naming what to type and stops there, instead of starting the work itself.
+- When execution was requested, it loads the selected skills and continues
+  instead of asking you to type their names.
 - The route it gives back mentions where to clear or compact context and where you are expected to review, not just a list of skill names.
 - Where two skills are close, it says which one and why the other is wrong for you.
 - Any claim it makes about another skill's behaviour shows up in the trace as it reading that skill's `SKILL.md`.

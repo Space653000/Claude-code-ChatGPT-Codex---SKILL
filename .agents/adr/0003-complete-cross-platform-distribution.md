@@ -18,7 +18,7 @@ limiting, and users should not need to remember skill names.
   canonical bucketed tree. Codex plugin validation requires one immediate
   directory per skill.
 - Remove explicit-only invocation flags from every canonical skill and generated
-  Codex copy. All 36 descriptions are model-facing context pointers.
+  Codex copy. Every active description is a model-facing context pointer.
 - Preserve Claude-only `argument-hint` metadata in canonical skills and remove
   it from generated Codex copies.
 - Treat a user-provided repository URL as an installation and automatic-use

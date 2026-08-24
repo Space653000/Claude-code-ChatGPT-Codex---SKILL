@@ -1,5 +1,20 @@
 # mattpocock-skills-complete
 
+## 1.5.0
+
+### Minor Changes
+
+- Add the original `adversarial-plan-review` skill for read-only plan
+  falsification before costly implementation.
+- Add the original `bounded-execution-loop` skill with observable acceptance,
+  checkpoints, batch gates, and explicit stop rules.
+- Document every command and workflow principle publicly visible in video
+  `BBq_obKDd9k`, with links to first-party host documentation.
+- Exclude paid prompts, members-only assets, and attempted reconstructions.
+- Route and validate all 38 skills automatically in Claude Code, ChatGPT, and
+  Codex.
+- Refresh transitive `js-yaml` packages to patched releases.
+
 ## 1.4.0
 
 ### Minor Changes

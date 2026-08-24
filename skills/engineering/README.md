@@ -7,6 +7,8 @@ Skills I use daily for code work.
 Automatically selected when their workflow fits the task.
 
 - **[ask-matt](./ask-matt/SKILL.md)**: Route a request across the complete catalog and choose the smallest relevant skill set.
+- **[adversarial-plan-review](./adversarial-plan-review/SKILL.md)**: Challenge a high-cost implementation plan with a separate read-only reviewer before coding.
+- **[bounded-execution-loop](./bounded-execution-loop/SKILL.md)**: Execute a large, decision-free checklist with observable acceptance, checkpoints, batch gates, and explicit stop rules.
 - **[grill-with-docs](./grill-with-docs/SKILL.md)**: Grilling session that also builds your project's domain model, sharpening terminology and updating `CONTEXT.md` and ADRs inline.
 - **[triage](./triage/SKILL.md)**: Move issues through a state machine of triage roles.
 - **[improve-codebase-architecture](./improve-codebase-architecture/SKILL.md)**: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
