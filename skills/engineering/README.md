@@ -9,6 +9,7 @@ Automatically selected when their workflow fits the task.
 - **[ask-matt](./ask-matt/SKILL.md)**: Route a request across the complete catalog and choose the smallest relevant skill set.
 - **[adversarial-plan-review](./adversarial-plan-review/SKILL.md)**: Challenge a high-cost implementation plan with a separate read-only reviewer before coding.
 - **[bounded-execution-loop](./bounded-execution-loop/SKILL.md)**: Execute a large, decision-free checklist with observable acceptance, checkpoints, batch gates, and explicit stop rules.
+- **[public-skill-distiller](./public-skill-distiller/SKILL.md)**: Turn a free public source into an original cross-platform skill with provenance and usage guidance, while skipping paid or private material.
 - **[grill-with-docs](./grill-with-docs/SKILL.md)**: Grilling session that also builds your project's domain model, sharpening terminology and updating `CONTEXT.md` and ADRs inline.
 - **[triage](./triage/SKILL.md)**: Move issues through a state machine of triage roles.
 - **[improve-codebase-architecture](./improve-codebase-architecture/SKILL.md)**: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.

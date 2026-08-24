@@ -34,6 +34,14 @@ provide a stronger independence boundary when they are already available. An
 isolated [subagent](https://www.aihero.dev/ai-coding-dictionary/subagent) is a
 useful fallback, with the weaker independence stated plainly.
 
+## Source and derivation
+
+This is an original cross-platform skill derived from principles described in
+free public sources. Its prompts, evidence contract, and fallback behavior are
+repository interpretations rather than a copy of a private plan-review prompt.
+The detailed provenance lives in the skill's
+[source record](https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL/blob/main/skills/engineering/adversarial-plan-review/references/provenance.md).
+
 ## Common questions
 
 **Does this replace code review?**

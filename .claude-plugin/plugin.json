@@ -1,7 +1,7 @@
 {
   "name": "mattpocock-skills-complete",
-  "version": "1.5.0",
-  "description": "Auto-selecting 38-skill distribution with 36 MIT-licensed Matt Pocock skills and two original public workflow additions for Claude Code, ChatGPT, and Codex.",
+  "version": "1.6.0",
+  "description": "Auto-selecting 39-skill distribution with 36 MIT-licensed Matt Pocock skills and three original public workflow additions for Claude Code, ChatGPT, and Codex.",
   "author": {
     "name": "Matt Pocock and Space653000",
     "url": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL"
@@ -23,6 +23,7 @@
     "./skills/engineering/ask-matt",
     "./skills/engineering/adversarial-plan-review",
     "./skills/engineering/bounded-execution-loop",
+    "./skills/engineering/public-skill-distiller",
     "./skills/engineering/diagnosing-bugs",
     "./skills/engineering/grill-with-docs",
     "./skills/engineering/triage",

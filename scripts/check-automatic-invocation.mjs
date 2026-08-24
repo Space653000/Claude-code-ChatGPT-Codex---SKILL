@@ -29,7 +29,12 @@ function generatedSkillDirs() {
     .filter((path) => existsSync(join(path, "SKILL.md")));
 }
 
-function validateSkills(label, skillDirs, expectedCount, { codex = false } = {}) {
+function validateSkills(
+  label,
+  skillDirs,
+  expectedCount,
+  { codex = false, requireDocs = false } = {},
+) {
   if (skillDirs.length !== expectedCount) {
     throw new Error(
       `${label}: expected ${expectedCount} skills, found ${skillDirs.length}`,
@@ -43,6 +48,33 @@ function validateSkills(label, skillDirs, expectedCount, { codex = false } = {})
     }
     if (!/^description:\s*\S.+$/m.test(skill)) {
       throw new Error(`${skillDir}: model-facing description is required`);
+    }
+    const origin = skill.match(/^  origin:\s*(\S.+)$/m)?.[1].trim();
+    if (
+      origin &&
+      origin !== "public-derived" &&
+      origin !== "repository-original"
+    ) {
+      throw new Error(`${skillDir}: unsupported metadata.origin "${origin}"`);
+    }
+    const provenancePath = join(skillDir, "references", "provenance.md");
+    if (origin && !existsSync(provenancePath)) {
+      throw new Error(
+        `${skillDir}: original skills require references/provenance.md`,
+      );
+    }
+    if (origin) {
+      const provenance = readFileSync(provenancePath, "utf8");
+      for (const field of [
+        "Origin class:",
+        "Access boundary:",
+        "## Excluded",
+        "## Licensing boundary",
+      ]) {
+        if (!provenance.includes(field)) {
+          throw new Error(`${provenancePath}: missing "${field}"`);
+        }
+      }
     }
     if (codex && /^argument-hint:\s*.+$/m.test(skill)) {
       throw new Error(`${skillDir}: Claude-only argument-hint leaked into Codex`);
@@ -59,6 +91,29 @@ function validateSkills(label, skillDirs, expectedCount, { codex = false } = {})
     ) {
       throw new Error(`${skillDir}: Codex explicit-only invocation is forbidden`);
     }
+
+    if (origin && requireDocs) {
+      const [, , bucket, name] = normalizedRelative(skillDir).split("/");
+      if (bucket === "engineering" || bucket === "productivity") {
+        const docsPath = join(repo, "docs", bucket, `${name}.md`);
+        if (!existsSync(docsPath)) {
+          throw new Error(`${skillDir}: original promoted skill needs usage docs`);
+        }
+        const docs = readFileSync(docsPath, "utf8");
+        for (const marker of [
+          "## When to reach for it",
+          "## It's working if",
+          "## Where it fits",
+        ]) {
+          if (!docs.includes(marker)) {
+            throw new Error(`${docsPath}: missing "${marker}"`);
+          }
+        }
+        if (!/provenance|source and derivation/i.test(docs)) {
+          throw new Error(`${docsPath}: source and derivation status is required`);
+        }
+      }
+    }
   }
 }
 
@@ -69,7 +124,9 @@ if (canonical.length === 0) {
   throw new Error("canonical catalog: no active skills found");
 }
 
-validateSkills("canonical catalog", canonical, canonical.length);
+validateSkills("canonical catalog", canonical, canonical.length, {
+  requireDocs: true,
+});
 validateSkills("generated Codex catalog", generated, canonical.length, {
   codex: true,
 });

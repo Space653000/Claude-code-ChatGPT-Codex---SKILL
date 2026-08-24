@@ -6,8 +6,15 @@ When the user provides this repository URL for installation or use, follow the
 agent bootstrap contract in [`.agents/install-block.md`](./.agents/install-block.md).
 Detect the current harness, install the complete plugin, inspect skill
 descriptions before each task, and automatically load the smallest relevant
-skill set. All 38 skills are model-reachable. The user never needs to name a
+skill set. All 39 skills are model-reachable. The user never needs to name a
 skill manually.
+
+When the host skill listing may be shortened or a route is unclear, read the
+generated `skills/engineering/ask-matt/CATALOG.md` before selecting. When a
+user asks to learn another URL into this catalog, call the Skill tool with
+`public-skill-distiller`: use only free public sources, skip paid or private
+material without further research, and keep source claims separate from
+repository-original behavior.
 
 Skills are organized into bucket folders under `skills/`:
 
@@ -30,11 +37,12 @@ Install commands are copied verbatim from
 `.claude-plugin/plugin.json` lists canonical skill paths explicitly. The Codex
 plugin lives under `plugins/mattpocock-skills-complete/` with a generated flat
 `skills/` directory because its validator expects one immediate folder per
-skill. The generator strips explicit-only invocation flags if an upstream sync
-introduces them, and strips Claude-only `argument-hint` metadata from Codex
-copies. Run `npm run
-sync-codex-skills` after changing canonical skill files, then run Claude strict
-validation and the Codex plugin validator.
+skill. The skill-catalog generator builds the complete on-demand router index
+from canonical frontmatter. The Codex generator strips explicit-only invocation
+flags if an upstream sync introduces them, and strips Claude-only
+`argument-hint` metadata from Codex copies. Run `npm run sync-codex-skills`
+after changing canonical skill files; it refreshes the catalog before the
+Codex copies. Then run Claude strict validation and the Codex plugin validator.
 
 Each skill entry in the top-level `README.md` must link the skill name to its `SKILL.md`.
 
@@ -45,6 +53,12 @@ Skills in `engineering/` and `productivity/` also have a human-facing docs page 
 Every active `SKILL.md` is model-invoked in this distribution. Explicit-only
 flags are forbidden in both Claude and Codex metadata. See
 [.agents/invocation.md](./.agents/invocation.md).
+
+Every repository-original or public-derived skill declares `metadata.origin`
+and contains `references/provenance.md`. Public-derived skills record public
+source URLs, direct source support, repository interpretation, exclusions, and
+the licensing boundary. Paid, members-only, credentialed, and private material
+is outside the distillation workflow.
 
 [`ask-matt`](./skills/engineering/ask-matt/SKILL.md) is the router that maps every user-reachable skill and how they relate. The same trigger that re-syncs a docs page applies to it: whenever you add, rename, remove, or change how a user-reachable skill fits the flows, re-read `ask-matt`'s `SKILL.md` and update it so the map stays accurate: a new skill it never mentions, or a stale one it still routes to, is a router that lies.
 

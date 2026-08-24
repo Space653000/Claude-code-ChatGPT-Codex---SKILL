@@ -15,8 +15,8 @@
 > [!NOTE]
 > This is the complete cross-platform distribution maintained at
 > `Space653000/Claude-code-ChatGPT-Codex---SKILL`. It preserves Matt Pocock's
-> MIT-licensed source, then adds two original skills based only on public
-> workflow principles. All 38 skills are exposed to Claude Code, ChatGPT, and
+> MIT-licensed source, then adds three original skills for public workflow
+> learning and execution. All 39 skills are exposed to Claude Code, ChatGPT, and
 > Codex, including the clearly labelled in-progress and misc catalogs.
 
 ## Give this repository URL to your agent
@@ -26,7 +26,7 @@
 > you its URL, treat that as a request to install the complete catalog for the
 > current harness. Detect Claude Code or ChatGPT/Codex, follow the matching
 > commands below, read the installed skill descriptions, and automatically
-> choose the smallest relevant skill set for each task. All 38 skills allow
+> choose the smallest relevant skill set for each task. All 39 skills allow
 > automatic model invocation. Never require the user to remember or type a
 > skill name.
 
@@ -58,7 +58,7 @@ If you want to keep up with changes to these skills, and any new ones I create, 
 
 [Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter)
 
-## Install the complete 38-skill catalog
+## Install the complete 39-skill catalog
 
 Use this repository as a marketplace in either harness. The plugin identity is
 `mattpocock-skills-complete`, and the marketplace identity is `space653000`.
@@ -112,8 +112,7 @@ After setup, the complete catalog is ready for selection.
 
 ## Free and public workflow additions
 
-This fork includes two original cross-platform skills derived only from
-publicly described workflow principles:
+This fork includes three original cross-platform skills:
 
 - [adversarial-plan-review](./skills/engineering/adversarial-plan-review/SKILL.md)
   separates a plan author from a read-only reviewer before costly
@@ -121,6 +120,9 @@ publicly described workflow principles:
 - [bounded-execution-loop](./skills/engineering/bounded-execution-loop/SKILL.md)
   executes a decision-free checklist with observable acceptance, checkpoints,
   batch gates, and explicit stop rules.
+- [public-skill-distiller](./skills/engineering/public-skill-distiller/SKILL.md)
+  turns a free public source into a distinct, traceable skill while skipping
+  paid, members-only, credentialed, and private material.
 
 The [public video workflow extraction](./docs/research/youtube-BBq_obKDd9k-public-workflow.md)
 lists every free, publicly usable command with timestamps, provides an original
@@ -129,6 +131,12 @@ documentation used for host-specific behavior.
 
 Paid prompts, members-only quick references, and attempted reconstructions are
 not included.
+
+Every public-derived skill records its source boundary in
+`references/provenance.md` and explains how to use it in its promoted docs
+page. When a host shortens the visible skill list, `ask-matt` reads its
+[complete generated catalog](./skills/engineering/ask-matt/CATALOG.md) and
+selects the smallest relevant set automatically.
 
 ## Why These Skills Exist
 
@@ -232,7 +240,7 @@ Software engineering fundamentals matter more than ever. These skills are my bes
 
 ## Reference
 
-All 38 skills are model-reachable. Claude Code, ChatGPT, and Codex can inspect
+All 39 skills are model-reachable. Claude Code, ChatGPT, and Codex can inspect
 their descriptions and invoke them automatically when a task fits. The groups
 below describe each skill's role, not an invocation requirement.
 
@@ -245,6 +253,7 @@ Skills I use daily for code work.
 - **[ask-matt](./skills/engineering/ask-matt/SKILL.md)**: Route a request across the complete catalog and choose the smallest relevant skill set.
 - **[adversarial-plan-review](./skills/engineering/adversarial-plan-review/SKILL.md)**: Challenge a high-cost implementation plan with a separate read-only reviewer before coding.
 - **[bounded-execution-loop](./skills/engineering/bounded-execution-loop/SKILL.md)**: Execute a large, decision-free checklist with observable acceptance, checkpoints, batch gates, and explicit stop rules.
+- **[public-skill-distiller](./skills/engineering/public-skill-distiller/SKILL.md)**: Turn a free public source into an original cross-platform skill with provenance and usage guidance, while skipping paid or private material.
 - **[grill-with-docs](./skills/engineering/grill-with-docs/SKILL.md)**: Grilling session that also builds your project's domain model, sharpening terminology and updating `CONTEXT.md` and ADRs inline.
 - **[triage](./skills/engineering/triage/SKILL.md)**: Move issues through a state machine of triage roles.
 - **[improve-codebase-architecture](./skills/engineering/improve-codebase-architecture/SKILL.md)**: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.

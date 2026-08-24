@@ -22,6 +22,7 @@ unclear, the task spans multiple skills, or you ask what to do next. Typing
 | A long session and a decision about the [context](https://www.aihero.dev/ai-coding-dictionary/context) | The ordered tree over the five options at a phase boundary |
 | An approved plan whose direction is expensive to reverse | [adversarial-plan-review](https://aihero.dev/skills-adversarial-plan-review) before implementation |
 | A large, decision-free checklist that may run unattended | [bounded-execution-loop](https://aihero.dev/skills-bounded-execution-loop) with acceptance, checkpoints, and stop rules |
+| A free public source you want turned into a reusable skill | [public-skill-distiller](https://aihero.dev/skills-public-skill-distiller), after checking the complete catalog for overlap |
 | A skill you have already picked | Nothing useful. Invoke that skill directly. |
 
 ## Prerequisites
@@ -67,10 +68,14 @@ People keep asking for one in the README. This skill is that list: it is what it
 **It told me half the skills aren't installed.**
 
 The complete cross-platform distribution removes explicit-only invocation flags
-from all 38 skills. The router and every destination skill remain visible to
+from all 39 skills. The router and every destination skill remain visible to
 the model, so the agent can inspect the catalog and continue the selected flow
 without asking you to type a skill name. The plugin manifests remain the
 authority on what is installed.
+
+When a host shortens its visible skill descriptions, the router reads its
+generated `CATALOG.md` to recover the complete name, category, maturity,
+origin, and trigger index before selecting a route.
 
 **It described a skill's behaviour, and the skill doesn't do that.**
 

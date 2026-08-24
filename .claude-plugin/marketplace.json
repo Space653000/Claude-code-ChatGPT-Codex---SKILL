@@ -4,12 +4,12 @@
     "name": "Space653000",
     "url": "https://github.com/Space653000"
   },
-  "description": "A complete auto-selecting 38-skill marketplace for Claude Code, ChatGPT, and Codex.",
+  "description": "A complete auto-selecting 39-skill marketplace for Claude Code, ChatGPT, and Codex.",
   "plugins": [
     {
       "name": "mattpocock-skills-complete",
       "source": "./",
-      "description": "All 36 pinned mattpocock/skills plus two original public workflow additions, available for automatic model selection.",
+      "description": "All 36 pinned mattpocock/skills plus three original public workflow additions, available for automatic model selection.",
       "category": "engineering",
       "keywords": [
         "engineering",

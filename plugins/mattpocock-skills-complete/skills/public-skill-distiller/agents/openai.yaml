@@ -1,0 +1,4 @@
+interface:
+  display_name: "Public Skill Distiller"
+  short_description: "Turn public workflows into traceable skills"
+  default_prompt: "Use $public-skill-distiller to turn this free public source into a cross-platform skill."

@@ -1,6 +1,6 @@
 {
   "name": "mattpocock-skills-complete",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "private": true,
   "description": "Cross-platform Matt Pocock skill catalog with public workflow additions",
   "repository": {
@@ -12,8 +12,10 @@
     "changeset": "changeset",
     "version": "changeset version && node scripts/sync-plugin-version.mjs",
     "check-plugin-version": "node scripts/sync-plugin-version.mjs --check",
-    "sync-codex-skills": "node scripts/sync-codex-plugin-skills.mjs",
-    "check-codex-skills": "node scripts/sync-codex-plugin-skills.mjs --check",
+    "sync-skill-catalog": "node scripts/sync-skill-catalog.mjs",
+    "check-skill-catalog": "node scripts/sync-skill-catalog.mjs --check",
+    "sync-codex-skills": "node scripts/sync-skill-catalog.mjs && node scripts/sync-codex-plugin-skills.mjs",
+    "check-codex-skills": "node scripts/sync-skill-catalog.mjs --check && node scripts/sync-codex-plugin-skills.mjs --check",
     "check-automatic-invocation": "node scripts/check-automatic-invocation.mjs",
     "check-plugin": "npm run check-plugin-version && npm run check-codex-skills && npm run check-automatic-invocation"
   },

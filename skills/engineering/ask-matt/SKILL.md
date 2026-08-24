@@ -7,10 +7,15 @@ description: Route requests across this repository's skill catalog. Use when the
 
 You don't remember every skill, so ask.
 
-Inspect the available skill descriptions before choosing a route. Select the
-smallest set that covers the request, call those skills, and continue the work.
-Stop after recommending a route only when the user asked for advice rather than
-execution. The user never needs to type the skill names in the route.
+Inspect the available skill descriptions before choosing a route. Read
+[CATALOG.md](CATALOG.md) when the host listing may be shortened, the best route
+is unclear, or a beta or specialized skill might fit. The catalog is the full
+index; the selected `SKILL.md` remains the authority on behavior.
+
+Select the smallest set that covers the request, call those skills, and
+continue the work. Stop after recommending a route only when the user asked for
+advice rather than execution. The user never needs to type the skill names in
+the route.
 
 A **flow** is a path through the skills. Most paths run along one **main flow**, and two **on-ramps** merge onto it. Everything else is standalone, or a vocabulary layer that runs underneath.
 
@@ -90,6 +95,7 @@ Off the main flow entirely.
 - **`/resolving-merge-conflicts`** works an in-progress merge or rebase conflict hunk by hunk, resolving by **intent** traced to each side's primary source rather than by picking lines, then finishes the operation. It never runs `--abort`. Standalone and off every flow: reach for it when you are already mid-conflict.
 - **`/prototype`** is a small, throwaway program that answers one design question: does this state model feel right, or what should this UI look like. Throwaway is a constraint on how the code is written, not a promise to destroy it: the answer folds into the real code, and the prototype itself is kept as a **primary source** on a `prototype/<name>` branch out of main, pointed at from the implementation issue. It's the detour in step 2 of the main flow, but reach for it any time a design question is hard to settle on paper.
 - **`/research`**: delegate reading legwork to a **background agent**: it investigates a question against **primary sources**, then leaves a cited Markdown file in the repo. Keep working while it reads. The file it produces is something to take *into* the main flow at `/grill-with-docs`, since research feeds the thinking rather than replacing it.
+- **`/public-skill-distiller`**: turn a free public video, article, document, or repository into an original cross-platform skill with provenance and usage guidance. It first checks the complete catalog for overlap. Paid, members-only, credentialed, and private material stops at the source gate without further research.
 - **`/to-questionnaire`** comes in when the thing blocking you isn't in your head or the codebase but in **someone else's**, and it writes them a questionnaire to fill in. It's the inverse of `/grill-me`: instead of interviewing you about the subject, it interviews you about the **send** (who it's going to, what you need back) and aims the questions at the gap. What comes back is material for `/grill-with-docs` or `/to-spec`.
 - **`/wizard`** is for the steps only a **human** can take: provisioning infrastructure, setting up credentials or CI secrets, clicking through an unfamiliar third-party dashboard, running a one-off migration or cutover. It generates an interactive bash script that opens each URL, captures each value, and writes it into `.env` and GitHub secrets, so the procedure stops being something you re-explain to an agent every time. Model-invoked, so the agent reaches for it the moment it hits a wall only you can pass. If the agent could just do it itself, it should; this is for where a human is genuinely in the loop.
 - **`/wait-what`** is the corrective for a message that didn't land. Use it mid-conversation, inside any other skill, and the agent re-pitches what it just said with the context you were missing, in plain English, using the `CONTEXT.md` vocabulary. It works after the fact; `/grill-with-docs` is the upfront cure, because a shared language agreed early is what stops the jargon arriving at all.

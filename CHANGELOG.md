@@ -1,5 +1,20 @@
 # mattpocock-skills-complete
 
+## 1.6.0
+
+### Minor Changes
+
+- Add the automatically selectable `public-skill-distiller` workflow for
+  turning free public sources into original cross-platform skills.
+- Add machine-validated provenance and usage requirements for repository
+  original and public-derived skills.
+- Generate a complete on-demand catalog so `ask-matt` can find all 39 skills
+  even when a host shortens its visible skill listing.
+- Treat this repository URL as installation and automatic-use intent, while
+  routing other public-source learning requests through the distiller.
+- Skip paid, members-only, credentialed, and private material without further
+  research or reconstruction.
+
 ## 1.5.0
 
 ### Minor Changes

@@ -33,6 +33,14 @@ Claude Code can use its official `/loop` feature for session-scoped recurring
 prompts. ChatGPT and Codex use their own active-task or scheduling mechanisms.
 The acceptance and safety contract stays the same across hosts.
 
+## Source and derivation
+
+This is an original cross-platform skill derived from publicly described
+checklist principles and first-party host documentation. The runner prompt,
+contract, and adapters are repository interpretations, not a private checklist
+or unpublished command. The detailed provenance lives in the skill's
+[source record](https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL/blob/main/skills/engineering/bounded-execution-loop/references/provenance.md).
+
 ## Common questions
 
 **Is this the same as Claude Code's `/loop`?**

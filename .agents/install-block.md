@@ -20,14 +20,22 @@ install and use the complete catalog. The agent must:
 2. Run the matching marketplace and plugin installation commands below.
 3. Start a new chat or session when the harness requires it to load the plugin.
 4. Inspect the available skill names and descriptions before planning each
-   task, then load the smallest relevant set of skill files.
-5. Select skills automatically. All 38 skills are model-reachable, so the user
+   task. When the host listing is shortened or the route is unclear, load the
+   complete generated catalog from `ask-matt/CATALOG.md`.
+5. Load the smallest relevant set of skill files and continue the requested
+   work.
+6. Select skills automatically. All 39 skills are model-reachable, so the user
    never needs to remember or type a skill name.
-6. Keep normal authorization boundaries. Selecting a skill does not authorize
+7. Keep normal authorization boundaries. Selecting a skill does not authorize
    unrelated external writes or destructive actions.
 
 Installation is complete only when the plugin is visible in the current
-harness and all 38 skills are discoverable.
+harness and all 39 skills are discoverable.
+
+When a user supplies another URL and asks to learn it into this catalog, use
+`public-skill-distiller`. Study only free public material. Skip paid,
+members-only, credentialed, and private content without further research or
+reconstruction.
 
 ## Claude Code
 
@@ -69,10 +77,10 @@ skills with the same names.
 
 Both plugin manifests expose every active `SKILL.md` under `skills/`:
 
-- 20 engineering skills
+- 21 engineering skills
 - 7 productivity skills
 - 7 in-progress skills
 - 4 misc skills
 
-The README must keep the beta and specialized labels visible even though all 38
+The README must keep the beta and specialized labels visible even though all 39
 skills are automatically selectable.

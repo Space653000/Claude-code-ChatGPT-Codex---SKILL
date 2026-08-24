@@ -35,7 +35,11 @@ if (duplicates.length > 0) {
   throw new Error(`Duplicate skill names: ${[...new Set(duplicates)].join(", ")}`);
 }
 
-skillSources.sort((a, b) => a.name.localeCompare(b.name));
+skillSources.sort((a, b) => {
+  if (a.name === "ask-matt") return -1;
+  if (b.name === "ask-matt") return 1;
+  return a.name.localeCompare(b.name);
+});
 
 function listFiles(root) {
   if (!existsSync(root)) return [];
@@ -62,7 +66,7 @@ function codexContent(source, file) {
 }
 
 function checkGeneratedCopy() {
-  const expectedNames = skillSources.map(({ name }) => name);
+  const expectedNames = skillSources.map(({ name }) => name).sort();
   const actualNames = existsSync(generatedRoot)
     ? readdirSync(generatedRoot, { withFileTypes: true })
         .filter((entry) => entry.isDirectory())

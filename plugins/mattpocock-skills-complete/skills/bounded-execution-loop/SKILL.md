@@ -1,6 +1,8 @@
 ---
 name: bounded-execution-loop
 description: Execute a large, decision-free checklist with observable acceptance criteria, checkpoints, batch gates, and explicit stop rules. Use for approved repetitive work that may run unattended; not for unresolved decisions or actions needing new authority.
+metadata:
+  origin: public-derived
 ---
 
 # Bounded Execution Loop
@@ -44,6 +46,9 @@ every batch gate for the review the contract requires.
 Read [references/host-adapters.md](references/host-adapters.md) only when the
 user asks for scheduling, recurring checks, or a host-specific way to keep the
 loop running.
+
+Read [references/provenance.md](references/provenance.md) only when auditing,
+publishing, or updating this skill's source claims.
 
 ## Completion
 

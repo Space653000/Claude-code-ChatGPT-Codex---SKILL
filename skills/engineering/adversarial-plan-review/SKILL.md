@@ -1,6 +1,8 @@
 ---
 name: adversarial-plan-review
 description: Challenge a high-cost implementation plan before coding by separating the plan author from a read-only reviewer. Use when a wrong direction would cause substantial rework; skip for small, reversible changes.
+metadata:
+  origin: public-derived
 ---
 
 # Adversarial Plan Review
@@ -31,6 +33,9 @@ start coding.
 
 Read [references/review-prompts.md](references/review-prompts.md) when preparing
 the author, reviewer, or reconciliation prompt.
+
+Read [references/provenance.md](references/provenance.md) only when auditing,
+publishing, or updating this skill's source claims.
 
 ## Boundaries
 
