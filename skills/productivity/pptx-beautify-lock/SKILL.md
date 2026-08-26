@@ -6,6 +6,7 @@ metadata:
   version: "0.6.1-bootstrap"
   languages: "zh-TW,en"
   canonical_repo: "https://github.com/Space653000/pptx-beautify-lock-Skill"
+  origin: repository-original
 ---
 
 # PPTX Beautify Lock — Catalog Bootstrap
