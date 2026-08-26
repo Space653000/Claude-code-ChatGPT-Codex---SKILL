@@ -120,6 +120,60 @@ The four original additions are:
 Each repository-original/public-derived skill carries provenance metadata and
 keeps private, credentialed, paid, and members-only material outside its scope.
 
+## Complete skill links
+
+### Engineering
+
+- [ask-matt](./skills/engineering/ask-matt/SKILL.md)
+- [adversarial-plan-review](./skills/engineering/adversarial-plan-review/SKILL.md)
+- [bounded-execution-loop](./skills/engineering/bounded-execution-loop/SKILL.md)
+- [code-review](./skills/engineering/code-review/SKILL.md)
+- [codebase-design](./skills/engineering/codebase-design/SKILL.md)
+- [diagnosing-bugs](./skills/engineering/diagnosing-bugs/SKILL.md)
+- [domain-modeling](./skills/engineering/domain-modeling/SKILL.md)
+- [grill-with-docs](./skills/engineering/grill-with-docs/SKILL.md)
+- [implement](./skills/engineering/implement/SKILL.md)
+- [improve-codebase-architecture](./skills/engineering/improve-codebase-architecture/SKILL.md)
+- [prototype](./skills/engineering/prototype/SKILL.md)
+- [public-skill-distiller](./skills/engineering/public-skill-distiller/SKILL.md)
+- [research](./skills/engineering/research/SKILL.md)
+- [resolving-merge-conflicts](./skills/engineering/resolving-merge-conflicts/SKILL.md)
+- [setup-matt-pocock-skills](./skills/engineering/setup-matt-pocock-skills/SKILL.md)
+- [tdd](./skills/engineering/tdd/SKILL.md)
+- [to-spec](./skills/engineering/to-spec/SKILL.md)
+- [to-tickets](./skills/engineering/to-tickets/SKILL.md)
+- [triage](./skills/engineering/triage/SKILL.md)
+- [wayfinder](./skills/engineering/wayfinder/SKILL.md)
+- [wizard](./skills/engineering/wizard/SKILL.md)
+
+### Productivity
+
+- [grill-me](./skills/productivity/grill-me/SKILL.md)
+- [grilling](./skills/productivity/grilling/SKILL.md)
+- [handoff](./skills/productivity/handoff/SKILL.md)
+- [pptx-beautify-lock](./skills/productivity/pptx-beautify-lock/SKILL.md)
+- [teach](./skills/productivity/teach/SKILL.md)
+- [to-questionnaire](./skills/productivity/to-questionnaire/SKILL.md)
+- [wait-what](./skills/productivity/wait-what/SKILL.md)
+- [writing-for-agents](./skills/productivity/writing-for-agents/SKILL.md)
+
+### In progress
+
+- [claude-handoff](./skills/in-progress/claude-handoff/SKILL.md)
+- [implement-spec](./skills/in-progress/implement-spec/SKILL.md)
+- [loop-me](./skills/in-progress/loop-me/SKILL.md)
+- [setup-ts-deep-modules](./skills/in-progress/setup-ts-deep-modules/SKILL.md)
+- [writing-beats](./skills/in-progress/writing-beats/SKILL.md)
+- [writing-fragments](./skills/in-progress/writing-fragments/SKILL.md)
+- [writing-shape](./skills/in-progress/writing-shape/SKILL.md)
+
+### Specialized
+
+- [git-guardrails-claude-code](./skills/misc/git-guardrails-claude-code/SKILL.md)
+- [migrate-to-shoehorn](./skills/misc/migrate-to-shoehorn/SKILL.md)
+- [scaffold-exercises](./skills/misc/scaffold-exercises/SKILL.md)
+- [setup-pre-commit](./skills/misc/setup-pre-commit/SKILL.md)
+
 ## Catalog discovery
 
 The generated complete catalog is:
