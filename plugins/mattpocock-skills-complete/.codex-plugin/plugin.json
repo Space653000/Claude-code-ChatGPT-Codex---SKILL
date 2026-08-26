@@ -1,7 +1,7 @@
 {
   "name": "mattpocock-skills-complete",
-  "version": "1.7.0",
-  "description": "Auto-selecting 40-skill distribution with 36 MIT-licensed Matt Pocock skills, three original public workflow additions, and the pptx-beautify-lock bootstrap for Claude Code, ChatGPT, and Codex.",
+  "version": "1.6.0",
+  "description": "Auto-selecting 39-skill distribution with 36 MIT-licensed Matt Pocock skills and three original public workflow additions for Claude Code, ChatGPT, and Codex.",
   "author": {
     "name": "Matt Pocock and Space653000",
     "url": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL"
@@ -15,8 +15,6 @@
     "claude-code",
     "chatgpt",
     "codex",
-    "pptx",
-    "powerpoint",
     "tdd",
     "code-review",
     "productivity"
@@ -24,8 +22,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Matt Pocock Skills Complete",
-    "shortDescription": "Automatically choose from all 40 available skills.",
-    "longDescription": "A cross-platform catalog with 36 pinned Matt Pocock skills, three original public workflow additions, and pptx-beautify-lock for strict PowerPoint visual refactoring, all available for automatic agent selection.",
+    "shortDescription": "Automatically choose from all 39 available skills.",
+    "longDescription": "A cross-platform catalog with 36 pinned Matt Pocock skills and three original public workflow additions, all available for automatic agent selection.",
     "developerName": "Matt Pocock and Space653000",
     "category": "Developer Tools",
     "capabilities": [
@@ -36,7 +34,6 @@
     "websiteURL": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL",
     "defaultPrompt": [
       "Choose and use the right skills for this task.",
-      "Beautify this existing PowerPoint without changing protected content.",
       "Turn this idea into a tested implementation.",
       "Review this codebase and suggest the next workflow."
     ]
