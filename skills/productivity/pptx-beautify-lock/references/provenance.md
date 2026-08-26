@@ -5,6 +5,9 @@
 - Canonical project: `Space653000/pptx-beautify-lock-Skill`
 - Purpose: Central-catalog routing and conservative bootstrap into the canonical
   PowerPoint visual-refactoring Skill for Claude Code and Codex.
+- Access boundary: Only the public canonical GitHub repository and locally
+  authorized files/tools are used; paid, private, credentialed, or members-only
+  material is outside this wrapper's scope.
 
 ## Repository interpretation
 
