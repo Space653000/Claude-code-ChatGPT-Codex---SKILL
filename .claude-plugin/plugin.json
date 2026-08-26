@@ -1,7 +1,7 @@
 {
   "name": "mattpocock-skills-complete",
-  "version": "1.6.0",
-  "description": "Auto-selecting 39-skill distribution with 36 MIT-licensed Matt Pocock skills and three original public workflow additions for Claude Code, ChatGPT, and Codex.",
+  "version": "1.7.0",
+  "description": "Auto-selecting 40-skill distribution with 36 MIT-licensed Matt Pocock skills, three original public workflow additions, and the pptx-beautify-lock canonical bootstrap for Claude Code, ChatGPT, and Codex.",
   "author": {
     "name": "Matt Pocock and Space653000",
     "url": "https://github.com/Space653000/Claude-code-ChatGPT-Codex---SKILL"
@@ -15,6 +15,8 @@
     "claude-code",
     "chatgpt",
     "codex",
+    "pptx",
+    "powerpoint",
     "tdd",
     "code-review",
     "productivity"
@@ -48,6 +50,7 @@
     "./skills/productivity/to-questionnaire",
     "./skills/productivity/wait-what",
     "./skills/productivity/writing-for-agents",
+    "./skills/productivity/pptx-beautify-lock",
     "./skills/in-progress/claude-handoff",
     "./skills/in-progress/implement-spec",
     "./skills/in-progress/loop-me",

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPTX Beautify Lock"
+  short_description: "Strict source-faithful PowerPoint beautification"
+  default_prompt: "Use $pptx-beautify-lock to beautify this existing PPTX while preserving protected content and source identity."

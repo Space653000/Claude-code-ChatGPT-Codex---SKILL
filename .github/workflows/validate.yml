@@ -1,0 +1,29 @@
+name: Validate catalog
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate plugin synchronization and automatic invocation
+        run: npm run check-plugin
+
+      - name: Compile PPTX canonical bootstrap scripts
+        run: |
+          python -m py_compile skills/productivity/pptx-beautify-lock/scripts/bootstrap_canonical.py
+          python -m py_compile plugins/mattpocock-skills-complete/skills/pptx-beautify-lock/scripts/bootstrap_canonical.py
