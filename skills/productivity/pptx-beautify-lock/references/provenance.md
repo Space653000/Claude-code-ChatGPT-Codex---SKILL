@@ -24,6 +24,13 @@ claim that installation succeeded when Git/network/filesystem access is blocked,
 and it does not relax Content Lock, source identity, font portability, Global
 Design Jury, or full-deck no-regression requirements.
 
+## Excluded
+
+- Paid, members-only, credentialed, or private source material
+- Proprietary presentation templates or third-party brand assets
+- Silent reconstruction of inaccessible content
+- Any bootstrap behavior that bypasses host authorization or filesystem policy
+
 ## External design research boundary
 
 The canonical project may cite public design principles and presentation
